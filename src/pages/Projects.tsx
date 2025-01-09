@@ -28,7 +28,7 @@ export const Projects = () => {
           <div className="flex gap-1 items-center justify-center">
             <h2 className="text-4xl">{currentProject.name}</h2>
             <a href="https://internhub.arendusekoobas.ee" target="_blank">
-              <img src={arrowIcon} className="bg-gray-800 h-min hover:bg-gray-700 hover:cursor-pointer"/>
+              <img src={arrowIcon} className="bg-gray-800 h-min hover:bg-gray-700 hover:cursor-pointer hover-black-sm"/>
             </a>
           </div>
           <p className="text-md">

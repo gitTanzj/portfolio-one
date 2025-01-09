@@ -1,0 +1,19 @@
+.hover-black{
+    transition: 200ms
+}
+
+.hover-black:hover{
+    transform: translate(2px, -2px);
+    box-shadow: -4px 4px black;
+    cursor:pointer;
+}
+
+.hover-black-sm{
+    transition:200ms;
+}
+
+.hover-black-sm:hover{
+    transform: translate(1px, -1px);
+    box-shadow: -2px 2px black;
+    cursor:pointer;
+}
