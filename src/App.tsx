@@ -11,6 +11,7 @@ import { Footer } from './pages/Footer'
 function App() {
   
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const [currentOverlayProject, setCurrentOverlayProject] = useState<(() => JSX.Element) | undefined>(undefined);
 
   useEffect(() => {
     const observerOptions = {
@@ -48,9 +49,18 @@ function App() {
               transform: 'translateY(10px)'
             }}
           >
-              <Component/>
+              <Component setCurrentOverlayProject={setCurrentOverlayProject} key={index}/>
           </section>
       ))}
+
+      { 
+        currentOverlayProject &&
+        <div className="absolute flex w-full h-min-screen bg-white bg-opacity-0.2">
+          <div className="m-10 w-full bg-white">
+            <currentOverlayProject/>
+          </div>
+        </div>
+      }
     </div>
   )
 }

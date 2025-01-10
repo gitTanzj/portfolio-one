@@ -17,3 +17,11 @@
     box-shadow: -2px 2px black;
     cursor:pointer;
 }
+
+#about-text-draggable{
+    opacity:0;
+}
+
+#about-text-box:hover > #about-text-draggable{
+    opacity: 1;
+}
