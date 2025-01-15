@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
       url: 'https://internhub.arendusekoobas.ee',
       tech: 'React, Tailwind, Express, Supabase',
       img: internhubImage,
-      misc: <div>Watch the pitch - <a target="_blank" href="https://www.youtube.com/watch?v=RI9v7KF7sLg&t=5792s&ab_channel=Tallinna%C3%9ClikoolITallinnUniversity" className="font-bold text-blue-400">here</a>!</div>
+      misc: <div>Watch the pitch - <a target="_blank" href="https://www.youtube.com/watch?v=RI9v7KF7sLg&t=3371s&ab_channel=Tallinna%C3%9ClikoolITallinnUniversity" className="font-bold text-blue-400 hover:underline">here</a>!</div>
     },
     {
       name: 'Suur Karu',
@@ -26,14 +26,14 @@ export const Projects: React.FC = () => {
     },
     {
       name: 'Must Kõuts',
-      description: 'A homepage for a local pub and restaurant. I made this during june of 2024.',
+      description: 'A homepage for a local pub and restaurant. I made this during june of 2024. The website hosts a vast gallery and a good overview of the business.',
       tech: 'Vanilla HTML/CSS',
       url: 'https://mustkouts.ee',
       img: mustkoutsImage
     },
     {
       name: 'Suurepeetri',
-      description: 'A homepage for a local housing business. This was made during july-august of 2024',
+      description: 'A homepage for a local housing business. This was made during july-august of 2024. The webpage has a unique style that is beautifully implemented and a unique structure.',
       url: 'https://darkslategray-dog-188572.hostingersite.com/',
       tech: 'React',
       img: suurepeetriImage

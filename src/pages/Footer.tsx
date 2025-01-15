@@ -14,9 +14,11 @@ export const Footer = () => {
               <img src={callIcon}/>
               <p>+372 5686 5079</p>
             </div>
-            <div className="flex flex-row gap-4">
-              <img src={mailIcon}/>
-              <p>kalle.riit@gmail.com</p>
+            <div>
+              <a className="flex gap-4 hover:underline" href="mailto:kalle.riit@gmail.com">
+                <img src={mailIcon}/>
+                <p>kalle.riit@gmail.com</p>
+              </a>
             </div>
             <div className="flex flex-row gap-4">
               <img src={homeIcon}/>

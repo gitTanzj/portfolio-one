@@ -37,11 +37,26 @@ function App() {
 
   return (
     <div>
-      {[Landing, About, Projects, Experience, Footer].map((Component, index) => (
+      {[Landing, About].map((Component, index) => (
           <section
             id={`${Component.name.toLowerCase()}`}
             key={index}
             ref={el => sectionsRef.current[index] = el}
+            style={{
+              transition: '0.5s',
+              opacity: 0,
+              transform: 'translateY(10px)'
+            }}
+          >
+              <Component/>
+          </section>
+      ))}
+      <Projects/>
+      {[Experience, Footer].map((Component, index) => (
+          <section
+            id={`${Component.name.toLowerCase()}`}
+            key={index}
+            ref={el => sectionsRef.current[index + 3] = el}
             style={{
               transition: '0.5s',
               opacity: 0,
