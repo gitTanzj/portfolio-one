@@ -1,4 +1,5 @@
 import React from 'react'
+import './Landing.css'
 
 export const Landing = () => {
 
@@ -6,9 +7,13 @@ export const Landing = () => {
 
   return (
     <div className="min-h-screen p-8">
-        <div className="flex flex-col justify-center items-center bg-gray-200 min-h-screen w-full p-4 gap-4">
-            <h1 className="text-gray-700  text-7xl">Kalle Riit</h1>
-            <div className="bg-gray-700 w-1/4 h-2"/>
+        <div className="background-image flex flex-col justify-center items-center min-h-screen w-full">
+            <div className="background-overlay flex flex-col justify-center items-center min-h-screen w-full p-4 gap-4">
+              <a href="#about">
+                <h1 className="text-white text-7xl">Kalle Riit</h1>
+              </a>
+              <div className="bg-white w-1/4 h-2"/>
+            </div>
         </div>
     </div>
   )

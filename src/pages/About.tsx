@@ -16,7 +16,7 @@ export const About = () => {
               </div>
             ))}
           </div>
-          <p className="text-lg font-semibold">
+          <p className="text-lg font-normal">
             <p className="text-4xl font-normal">My name is <b>Kalle Riit</b>.</p>
             <br/>
             I am currently attending Tartu Vocational College and am currently in my third year of learning to be a software developer, but in total I have learned software development independently for about 5 years now. 
