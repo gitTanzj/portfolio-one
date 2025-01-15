@@ -18,10 +18,10 @@
     cursor:pointer;
 }
 
-#about-text-draggable{
+#draggable{
     opacity:0;
 }
 
-#about-text-box:hover > #about-text-draggable{
+#about-text-box:hover > #draggable{
     opacity: 1;
 }

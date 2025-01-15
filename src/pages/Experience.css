@@ -1,0 +1,5 @@
+
+
+.stage-container:hover > #draggable{
+    opacity: 1;
+}

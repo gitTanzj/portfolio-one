@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
 import './App.css'
 
 import { Landing } from './pages/Landing'
@@ -36,37 +39,39 @@ function App() {
   }, [])
 
   return (
-    <div>
-      {[Landing, About].map((Component, index) => (
-          <section
-            id={`${Component.name.toLowerCase()}`}
-            key={index}
-            ref={el => sectionsRef.current[index] = el}
-            style={{
-              transition: '0.5s',
-              opacity: 0,
-              transform: 'translateY(10px)'
-            }}
-          >
-              <Component/>
-          </section>
-      ))}
-      <Projects/>
-      {[Experience, Footer].map((Component, index) => (
-          <section
-            id={`${Component.name.toLowerCase()}`}
-            key={index}
-            ref={el => sectionsRef.current[index + 3] = el}
-            style={{
-              transition: '0.5s',
-              opacity: 0,
-              transform: 'translateY(10px)'
-            }}
-          >
-              <Component/>
-          </section>
-      ))}
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div>
+        {[Landing, About].map((Component, index) => (
+            <section
+              id={`${Component.name.toLowerCase()}`}
+              key={index}
+              ref={el => sectionsRef.current[index] = el}
+              style={{
+                transition: '0.5s',
+                opacity: 0,
+                transform: 'translateY(10px)'
+              }}
+            >
+                <Component/>
+            </section>
+        ))}
+        <Projects/>
+        {[Experience, Footer].map((Component, index) => (
+            <section
+              id={`${Component.name.toLowerCase()}`}
+              key={index}
+              ref={el => sectionsRef.current[index + 3] = el}
+              style={{
+                transition: '0.5s',
+                opacity: 0,
+                transform: 'translateY(10px)'
+              }}
+            >
+                <Component/>
+            </section>
+        ))}
+      </div>
+    </DndProvider>
   )
 }
 
