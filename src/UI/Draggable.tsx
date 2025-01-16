@@ -1,10 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { useDrag } from "react-dnd";
 
-const DraggableItem = ({ name }) => {
+interface DraggableItemProps {
+  children: ReactNode
+}
+
+const DraggableItem: React.FC<DraggableItemProps> = ({ children }) => {
     const [{ isDragging }, dragRef] = useDrag({
       type: "ITEM",
-      item: { name },
+      item: { children },
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
@@ -14,15 +18,10 @@ const DraggableItem = ({ name }) => {
       <div
         ref={dragRef}
         style={{
-          opacity: isDragging ? 0.5 : 1,
           cursor: "move",
-          padding: "8px",
-          margin: "4px",
-          backgroundColor: "lightblue",
-          border: "1px solid gray",
         }}
       >
-        {name}
+        {children}
       </div>
     );
   };
