@@ -1,4 +1,4 @@
-import React, { Dispatch, useState } from 'react'
+import React from 'react'
 import arrowIcon from '../assets/icons/arrow.svg'
 
 import internhubImage from '../assets/images/internhub.png'
@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       name: 'InternHub',
-      description: 'A startup built by me and my friends. InternHub is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology.',
+      description: 'A startup currently under development by me and my friends. InternHub is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology.',
       url: 'https://internhub.arendusekoobas.ee',
       tech: 'React, Tailwind, Express, Supabase',
       img: internhubImage,
@@ -59,7 +59,9 @@ export const Projects: React.FC = () => {
                 <div className="text-lg font-light">Technologies: <span className="text-white font-bold">{project.tech}</span></div>
               </div>
               <div className={` ${index % 2 === 0 ? 'order-last' : 'order-first'} w-96 h-64 flex justify-center items-center`}>
-                <img style={{ objectFit: 'fill'}} src={project.img} alt={`Project ${index + 1}`} width={600} height={500} className="object-cover rounded-xl shadow-lg"/>
+                <a href={project.url} target="_blank">
+                  <img style={{ objectFit: 'fill'}} src={project.img} alt={`Project ${index + 1}`} width={600} height={500} className="object-cover rounded-xl shadow-lg hover:cursor-pointer hover:shadow-xl transition-all"/>
+                </a>
               </div>
           </div>
         ))}

@@ -6,7 +6,7 @@ interface DraggableItemProps {
 }
 
 const DraggableItem: React.FC<DraggableItemProps> = ({ children }) => {
-    const [{ isDragging }, dragRef] = useDrag({
+    const [ _ , dragRef] = useDrag({
       type: "ITEM",
       item: { children },
       collect: (monitor) => ({

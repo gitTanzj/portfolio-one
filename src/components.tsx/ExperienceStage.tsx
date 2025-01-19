@@ -7,9 +7,9 @@ interface ExperienceStageProps {
 }
 
 export const ExperienceStage: React.FC<ExperienceStageProps> = ({ stage }) => {
-    const [{ isDragging }, drag] = useDrag(() => ({
+    const [ _ , drag] = useDrag(() => ({
         type: "stage",
-        item: { stage },
+        item: stage,
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging(),
         }),
@@ -17,7 +17,11 @@ export const ExperienceStage: React.FC<ExperienceStageProps> = ({ stage }) => {
 
 
   return (
-    <div ref={drag} className={`stage-container hover-black border-2 w-full border-black p-4 flex flex-col gap-1 `}>
+    <div 
+        ref={drag} 
+        className={`stage-container hover-black border-2 w-full border-black p-4 flex flex-col gap-1`}
+        style={{cursor: 'move'}}
+    >
         <div id="draggable" className="flex flex-col w-full justify-center items-center h-4 w-10 top-0 gap-1 p-3 transition-all duration-200">
         {[...Array(2)].map((_, index) => (
             <div key={index} className="flex flow-row gap-1">
