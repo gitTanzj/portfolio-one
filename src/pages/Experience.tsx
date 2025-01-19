@@ -41,30 +41,30 @@ export const Experience = () => {
   
 
   return (
-    <div className="flex justify-center items-center min-h-screen gap-8">
-      <div className="flex flex-col justify-start items-center w-1/3">
-        <div className="flex justify-start items-center p-4 w-full">
-          <p className="font-normal text-4xl">This is my <b>Experience so far</b>.</p>
+    <div className="flex flex-col md:flex-row justify-center items-center min-h-screen gap-4 sm:gap-8 p-2 sm:p-4">
+      <div className="flex flex-col justify-start items-center w-full md:w-1/3">
+        <div className="flex justify-start items-center p-2 sm:p-4 w-full">
+          <p className="font-normal text-2xl sm:text-4xl">This is my <b>Experience so far</b>.</p>
         </div>
-        <div className="flex flex-col mt-12 justify-center items-start gap-8">
-          {stages.map((stage) => (
-            <ExperienceStage stage={stage}/>
+        <div className="flex flex-col mt-6 sm:mt-12 justify-center items-start gap-4 sm:gap-8 w-full">
+          {stages.map((stage, index) => (
+            <ExperienceStage key={index} stage={stage}/>
           ))}
         </div>
       </div>
       {selectedStage ? 
-        <div className="flex flex-col justify-center items-center border-2 border-black p-4 w-1/3 gap-4">
-          <p className="text-5xl w-full">{selectedStage.title}</p>
-          <p className="font-semibold w-full ">{selectedStage.place}</p>
-          <p className="text-xl">{selectedStage.description.map((paragraph: string) => (
+        <div className="flex flex-col justify-center items-center border-2 border-black p-2 sm:p-4 w-full md:w-1/3 gap-2 sm:gap-4 mt-4 md:mt-0">
+          <p className="text-3xl sm:text-5xl w-full">{selectedStage.title}</p>
+          <p className="font-semibold w-full">{selectedStage.place}</p>
+          <div className="text-base sm:text-xl">{selectedStage.description.map((paragraph: string) => (
             <p>{paragraph}</p>
-          ))}</p>
-          <button className="hover-black-sm flex justify-center items-center border-2 border-black p-3" onClick={() => setSelectedStage(undefined)}>Pop</button>
+          ))}</div>
+          <button className="hover-black-sm flex justify-center items-center border-2 border-black p-2 sm:p-3" onClick={() => setSelectedStage(undefined)}>Pop</button>
         </div> 
         :
-        <div ref={drop} className="flex flex-col justify-center items-center w-1/3 p-4 border-2 border-black h-96">
+        <div ref={drop} className="flex flex-col justify-center items-center w-full md:w-1/3 p-2 sm:p-4 border-2 border-black h-48 sm:h-96 mt-4 md:mt-0">
             <div className={`w-full h-full flex justify-center items-center border-2 border-dashed ${isOver && 'border-gray-700'} transition-all duration-100`}>
-              <p className="text-gray-500 text-lg text-center">{isOver ? 'Drop it in here' : 'Psst! Drag one of those in here!'}</p> 
+              <p className="text-gray-500 text-base sm:text-lg text-center p-2">{isOver ? 'Drop it in here' : 'Psst! Drag one of those in here!'}</p> 
             </div> 
         </div>
       }

@@ -40,7 +40,7 @@ function App() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div>
+      <div className="m-2 md:m-0">
         {[Landing, About].map((Component, index) => (
             <section
               id={`${Component.name.toLowerCase()}`}

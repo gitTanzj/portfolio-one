@@ -41,12 +41,12 @@ export const Projects: React.FC = () => {
   ]
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen w-full text-gray-800 p-4 gap-10 bg-gray-700 text-white">
+    <div className="flex flex-col justify-center items-center min-h-screen w-full text-gray-800 p-2 sm:p-4 gap-6 sm:gap-10 bg-gray-700 text-white">
         {projects.map((project, index) => (
-          <div key={index} className="flex justify-center items-center min-h-96 w-2/3 gap-8">
-              <div className={`flex flex-col gap-4 w-1/2 ${index % 2 === 0 ? 'order-first' : 'order-last'}`}>
+          <div key={index} className="flex flex-col md:flex-row justify-center items-center min-h-96 w-full md:w-2/3 gap-4 sm:gap-8 p-2">
+              <div className={`flex flex-col gap-4 w-full md:w-1/2 ${index % 2 === 0 ? 'md:order-first' : 'md:order-last'}`}>
                 <div className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} items-center gap-2`}>
-                  <h2 className={`text-6xl ${index}`}>{project.name}</h2>
+                  <h2 className={`text-3xl sm:text-6xl ${index}`}>{project.name}</h2>
                   {
                     project.url &&
                     <a href={project.url} target="_blank">
@@ -54,13 +54,13 @@ export const Projects: React.FC = () => {
                     </a>
                   }
                 </div>
-                <p className={`text-xl text-left`}>{project.description}</p>
+                <p className={`text-base sm:text-xl text-left`}>{project.description}</p>
                 {project.misc && project.misc}
-                <div className="text-lg font-light">Technologies: <span className="text-white font-bold">{project.tech}</span></div>
+                <div className="text-sm sm:text-lg font-light">Technologies: <span className="text-white font-bold">{project.tech}</span></div>
               </div>
-              <div className={` ${index % 2 === 0 ? 'order-last' : 'order-first'} w-96 h-64 flex justify-center items-center`}>
-                <a href={project.url} target="_blank">
-                  <img style={{ objectFit: 'fill'}} src={project.img} alt={`Project ${index + 1}`} width={600} height={500} className="object-cover rounded-xl shadow-lg hover:cursor-pointer hover:shadow-xl transition-all"/>
+              <div className={`${index % 2 === 0 ? 'md:order-last' : 'md:order-first'} w-full sm:w-96 h-48 sm:h-64 flex justify-center items-center`}>
+                <a href={project.url} target="_blank" className="w-full h-full flex justify-center items-center">
+                  <img style={{ objectFit: 'contain'}} src={project.img} alt={`Project ${index + 1}`} width={600} height={500} className="max-w-full max-h-full rounded-xl shadow-lg hover:cursor-pointer hover:shadow-xl transition-all"/>
                 </a>
               </div>
           </div>
