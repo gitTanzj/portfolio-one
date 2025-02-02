@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import arrowIcon from '../assets/icons/arrow.svg'
+import './Projects.css';
 
 import internhubImage from '../assets/images/internhub.png'
 import mustkoutsImage from '../assets/images/mustkouts.png'
@@ -11,7 +12,7 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       name: 'InternHub',
-      description: 'A startup currently under development by me and my friends. InternHub is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology. I am currently the team lead and a full-stack software developer.',
+      description: 'A startup currently under development by me and some of my friends. InternHub is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology. I am currently the team lead and a full-stack software developer.',
       url: 'https://internhub.arendusekoobas.ee',
       tech: 'React, TailwindCSS, Express, Supabase',
       img: internhubImage,
@@ -36,9 +37,12 @@ export const Projects: React.FC = () => {
       description: 'A homepage for a local housing business. This was made during july-august of 2024. The webpage has a unique style that is beautifully implemented and a unique structure.',
       url: 'https://darkslategray-dog-188572.hostingersite.com/',
       tech: 'React, TypeScript',
-      img: suurepeetriImage
+      img: suurepeetriImage,
+      misc: <div className="font-light">The site also has a dynamic version with an admin panel and backend, but is not currently live. - <a href="https://github.com/gitTanzj/suurepeetri-dynamic" className="font-bold text-blue-400 hover:underline" target="_blank">Github link</a></div>
     }
   ]
+
+  const [showOther, setShowOther] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen w-full text-gray-800 p-2 sm:p-4 gap-6 sm:gap-10 bg-gray-700 text-white">
@@ -65,6 +69,36 @@ export const Projects: React.FC = () => {
               </div>
           </div>
         ))}
+        <div className="flex flex-col justify-start items-start min-h-[500px] w-full md:w-2/3 gap-4 sm:gap-8 p-4">
+          <h2 className="text-5xl">Some other projects I worked on</h2>
+          <div>
+            <h3 className="font-semibold text-2xl">Doc Gen - <a className="text-blue-400 hover:underline" href="https://docgen.kalleriit.ee" target="_blank">docgen.kalleriit.ee</a></h3>
+            <p className="font-light">A web app that utilizes the power of an LLM to create a custom notice in seconds.</p>
+            <p className="font-semibold">Technologies - React, Express, Redis, Typescript, Tailwind</p>
+          </div>
+            {showOther ? (
+            <>
+              <div>
+                <h3 className="font-semibold text-2xl">Andergraund labeli ametlik veebileht - <a className="text-blue-400 hover:underline" href="https://andergraund.ee" target="_blank">andergraund.ee</a></h3>
+                <p className="font-light">As the second person to work on this site, I overhauled the styling, optimized the site for mobile and added the news and contact pages.</p>
+                <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-2xl">Afke / Tauri Väli ametlik veebileht - <a className="text-blue-400 hover:underline" href="https://afke.ee" target="_blank">afke.ee</a></h3>
+                <p className="font-light">Also as the second person to work on this, I optimized it for mobile and created the Portfolio section.</p>
+                <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
+              </div>
+            </>)
+            :
+            <div className="flex justify-center items-center w-1/6">
+              <button onClick={() => setShowOther(true)} className="dots-animation text-6xl flex flex-row gap-2 justify-center items-center w-24 h-12 transition-all border-2 border-white">
+                {[...Array(3)].map((_, index) => (
+                  <div key={index} className="h-2 w-2 bg-gray-800 rounded-full bg-white"></div>
+                ))}
+              </button>
+            </div>
+            }
+        </div>
     </div>
   )
 }

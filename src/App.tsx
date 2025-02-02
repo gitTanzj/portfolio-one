@@ -17,8 +17,8 @@ function App() {
   const sectionNames = [
     'landing',
     'about',
-    'experience',
     'projects',
+    'experience',
     'footer'
   ];
 

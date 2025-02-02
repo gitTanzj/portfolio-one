@@ -1,0 +1,29 @@
+.dots-animation:hover{
+    transform: translate(2px, -2px);
+    box-shadow: -2px 2px white;
+    transition: 200ms all;
+}
+
+.dots-animation:hover > div{
+    animation: dots-animation infinite 1s;
+}
+
+.dots-animation > div:nth-child(2){
+    animation-delay: 100ms;
+}
+
+.dots-animation > div:nth-child(3){
+    animation-delay: 200ms;
+}
+
+@keyframes dots-animation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-4px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
