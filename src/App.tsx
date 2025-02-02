@@ -14,6 +14,13 @@ import { Footer } from './pages/Footer'
 function App() {
   
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const sectionNames = [
+    'landing',
+    'about',
+    'experience',
+    'projects',
+    'footer'
+  ];
 
   useEffect(() => {
     const observerOptions = {
@@ -43,7 +50,7 @@ function App() {
       <div className="m-2 md:m-0">
         {[Landing, About].map((Component, index) => (
             <section
-              id={`${Component.name.toLowerCase()}`}
+              id={`${sectionNames[index]}`}
               key={index}
               ref={el => sectionsRef.current[index] = el}
               style={{
@@ -55,10 +62,12 @@ function App() {
                 <Component/>
             </section>
         ))}
-        <Projects/>
+        <section id={`${sectionNames[2]}`}>
+          <Projects/>
+        </section>
         {[Experience, Footer].map((Component, index) => (
             <section
-              id={`${Component.name.toLowerCase()}`}
+              id={`${sectionNames[index]}`}
               key={index}
               ref={el => sectionsRef.current[index + 3] = el}
               style={{
