@@ -15,6 +15,14 @@ function App() {
   
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
+  const sectionNames = [
+    "landing",
+    "about",
+    "projects",
+    "experience",
+    "footer"
+  ]
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.5
@@ -43,7 +51,7 @@ function App() {
       <div className="m-2 md:m-0">
         {[Landing, About].map((Component, index) => (
             <section
-              id={`${Component.name.toLowerCase()}`}
+              id={sectionNames[index]}
               key={index}
               ref={el => sectionsRef.current[index] = el}
               style={{
@@ -55,10 +63,15 @@ function App() {
                 <Component/>
             </section>
         ))}
-        <Projects/>
+        <section
+          id={sectionNames[2]}
+          ref={el => sectionsRef.current[2] = el}
+        >
+          <Projects/>
+        </section>
         {[Experience, Footer].map((Component, index) => (
             <section
-              id={`${Component.name.toLowerCase()}`}
+              id={sectionNames[index + 3]}
               key={index}
               ref={el => sectionsRef.current[index + 3] = el}
               style={{
