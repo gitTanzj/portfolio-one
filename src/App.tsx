@@ -50,7 +50,7 @@ function App() {
       <div className="m-2 md:m-0">
         {[Landing, About].map((Component, index) => (
             <section
-              id={`${sectionNames[index]}`}
+              id={sectionNames[index]}
               key={index}
               ref={el => sectionsRef.current[index] = el}
               style={{
@@ -62,12 +62,15 @@ function App() {
                 <Component/>
             </section>
         ))}
-        <section id={`${sectionNames[2]}`}>
+        <section
+          id={sectionNames[2]}
+          ref={el => sectionsRef.current[2] = el}
+        >
           <Projects/>
         </section>
         {[Experience, Footer].map((Component, index) => (
             <section
-              id={`${sectionNames[index]}`}
+              id={sectionNames[index + 3]}
               key={index}
               ref={el => sectionsRef.current[index + 3] = el}
               style={{
