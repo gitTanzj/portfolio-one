@@ -17,9 +17,9 @@ export const Footer = () => {
               <p>+372 5686 5079</p>
             </div>
             <div>
-              <a className="flex gap-4 hover:underline" href="mailto:kalle.riit@voco.ee">
+              <a className="flex gap-4 hover:underline" href="mailto:info@kalleriit.ee">
                 <img src={mailIcon}/>
-                <p>kalle.riit@voco.ee</p>
+                <p>info@kalleriit.ee</p>
               </a>
             </div>
             <div className="flex flex-row gap-4">

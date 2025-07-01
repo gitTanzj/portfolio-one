@@ -32,8 +32,8 @@ export const Experience = () => {
       description: ["I taught young children basic programming and game development in Roblox using the programming language Lua and the Roblox game engine. It was a fun experience and gave me a good insight into the world of game development."]
     },
     {
-      title: "Website design and development",
-      place: "Self employed",
+      title: "Web design and development",
+      place: "Self-employed",
       time: ["2024", "..."],
       description: ["During my second summer break I decided to give my skills a real practical outlet through web development for local businesses.", "So far I have completed websites for 3 clients and in addition to fantastic feedback, I've also gained a lot of knowledge about web development."]
     }
