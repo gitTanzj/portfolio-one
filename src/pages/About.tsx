@@ -11,7 +11,7 @@ export const About = () => {
             <div className="text-base sm:text-md md:text-lg font-normal">
               <p className="text-3xl sm:text-4xl md:text-5xl font-normal">My name is <b>Kalle Riit</b></p>
               <br/>
-              I am currently attending Tartu Vocational College and am currently in my third year of learning to be a software developer, but in total I have learned software development independently for about 4 years now. 
+              I am currently attending Tartu Vocational College and am currently in my fourth year of learning to be a software developer, but in total I have learned software development independently for about 5 years now. 
               I chose to take on this path of software development for the pure fun of it.
               For me, it's really about creating something cool and in the best case even useful for other people to use and enjoy.
             </div>

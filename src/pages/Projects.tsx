@@ -4,7 +4,6 @@ import './Projects.css';
 
 import internhubImage from '../assets/images/internhub.png'
 import docgenImage from '../assets/images/docgen.png'
-import suurepeetriImage from '../assets/images/suurepeetri.png'
 import suurkaruImage from '../assets/images/suurkaru.png'
 
 export const Projects: React.FC = () => {
@@ -12,9 +11,9 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       name: 'InternKit',
-      description: 'A startup currently under development by me and some of my friends. InternKit is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology. I am currently the team lead and a full-stack software developer.',
+      description: 'A start-up currently under development by me and some of my friends. InternKit is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology. I am currently the team lead and a full-stack software developer.',
       url: 'https://app.internkit.ee',
-      tech: 'React, TailwindCSS, Express, Supabase',
+      tech: 'React, TailwindCSS, Express, Supabase, Kafka',
       img: internhubImage,
       misc: <div>Watch the pitch - <a target="_blank" href="https://www.youtube.com/watch?v=RI9v7KF7sLg&t=3371s&ab_channel=Tallinna%C3%9ClikoolITallinnUniversity" className="font-bold text-blue-400 hover:underline">here</a>!</div>
     },
@@ -31,14 +30,6 @@ export const Projects: React.FC = () => {
       url: 'https://suurkaru.ee',
       tech: 'React, TypeScript, EmailJS, TailwindCSS',
       img: suurkaruImage
-    },
-    {
-      name: 'Suurepeetri',
-      description: 'A homepage for a local housing business. This was made during july-august of 2024. The webpage has a unique style that is beautifully implemented and a unique structure.',
-      url: 'https://darkslategray-dog-188572.hostingersite.com/',
-      tech: 'React, TypeScript',
-      img: suurepeetriImage,
-      misc: <div className="font-light">The site also has a dynamic version with an admin panel and backend, but is not currently live. - <a href="https://github.com/gitTanzj/suurepeetri-dynamic" className="font-bold text-blue-400 hover:underline" target="_blank">Github link</a></div>
     }
   ]
 
@@ -72,17 +63,12 @@ export const Projects: React.FC = () => {
         <div className="flex flex-col justify-start items-start min-h-[500px] w-full md:w-2/3 gap-4 sm:gap-8 p-4">
           <h2 className="text-5xl">Some other projects I worked on</h2>
           <div>
-            <h3 className="font-semibold text-2xl">Must Kõuts - <a className="text-blue-400 hover:underline" href="https://docgen.kalleriit.ee" target="_blank">mustkouts.ee</a></h3>
+            <h3 className="font-semibold text-2xl">Must Kõuts - <a className="text-blue-400 hover:underline" href="https://mustkouts.ee" target="_blank">mustkouts.ee</a></h3>
             <p className="font-light">A homepage for a local pub and restaurant. I made this during june of 2024. The website hosts a vast gallery and a good overview of the business.</p>
             <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
           </div>
             {showOther ? (
             <>
-              <div>
-                <h3 className="font-semibold text-2xl">Andergraund label's official website - <a className="text-blue-400 hover:underline" href="https://andergraund.ee" target="_blank">andergraund.ee</a></h3>
-                <p className="font-light">As the second person to work on this site, I overhauled the styling, optimized the site for mobile and added the news and contact pages.</p>
-                <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
-              </div>
               <div>
                 <h3 className="font-semibold text-2xl">Afke / Tauri Väli's official website - <a className="text-blue-400 hover:underline" href="https://afke.ee" target="_blank">afke.ee</a></h3>
                 <p className="font-light">Also as the second person to work on this, I optimized it for mobile and created the Portfolio section.</p>

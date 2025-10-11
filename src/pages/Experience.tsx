@@ -22,7 +22,7 @@ export const Experience = () => {
     {
       title: "Software development student",
       place: "Tartu Vocational College",
-      time: ["2022", '...'],
+      time: ["2022", '2026'],
       description: ["I started at Tartu Vocational College in september of 2022 and have gained a huge amount of knowledge and experience. I have participated in multiple competitions and won high places in most of them."]
     },
     {
@@ -35,7 +35,14 @@ export const Experience = () => {
       title: "Web design and development",
       place: "Self-employed",
       time: ["2024", "..."],
-      description: ["During my second summer break I decided to give my skills a real practical outlet through web development for local businesses.", "So far I have completed websites for 3 clients and in addition to fantastic feedback, I've also gained a lot of knowledge about web development."]
+      description: ["During my second summer break I decided to give my skills a real practical outlet through web development for local businesses.", "So far I have completed websites for 4 clients and in addition to fantastic feedback, I've also gained a lot of knowledge about web development."]
+    },
+    {
+      title: "Junior Software Engineer",
+      place: "Pipedrive",
+      time: ["2025", "..."],
+      description: ["Joined Pipedrive as an intern during the School of Code 2025 program and got promoted to a Junior Software Engineer. Since then I have been working on the main Pipedrive web-application.",
+        "The main work focuses on full-stack development within a microservice architecture"]
     }
   ]
   
