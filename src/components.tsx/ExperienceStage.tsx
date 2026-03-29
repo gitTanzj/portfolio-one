@@ -32,7 +32,10 @@ export const ExperienceStage: React.FC<ExperienceStageProps> = ({ stage }) => {
         ))}
         </div>
         <p className="text-2xl sm:text-4xl">{stage.title}</p>
-        <p className="text-sm sm:text-base hidden md:block">{stage.place}</p>
+        <div className="flex items-center gap-2 hidden md:flex">
+            {stage.logo && <img src={stage.logo} alt={`${stage.place} logo`} className="h-8 sm:h-10 w-auto object-contain rounded-sm" />}
+            <p className="text-sm sm:text-base">{stage.place}</p>
+        </div>
         <p className="text-sm sm:text-base">{stage.time.length > 1 ? `${stage.time[0]} - ${stage.time[1]}` : stage.time[0]}</p>
     </div>
     )

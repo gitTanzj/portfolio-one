@@ -5,7 +5,7 @@ import mailIcon from '../assets/icons/mail.svg'
 export const Footer = () => {
   return (
     <div className="min-h-1/2 w-full flex flex-col justify-end">
-      <div className="flex justify-center items-center mb-24">
+      <div className="flex justify-center items-center mb-24 mt-12">
         <p className="text-lg">Thank you for checking out my portfolio! :)</p>
       </div>
       <div className="w-full h-96 bg-gray-600 text-white pt-8 flex justify-center md:block">

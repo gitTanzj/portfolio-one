@@ -1,4 +1,4 @@
-import image from '../assets/images/_DSC4846.jpg'
+import image from '../assets/images/IMG_3629.webp'
 import './About.css'
 import arrowDown from '../assets/icons/arrow_down.svg'
 

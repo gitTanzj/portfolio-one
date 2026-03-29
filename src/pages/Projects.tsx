@@ -11,19 +11,12 @@ export const Projects: React.FC = () => {
   const projects = [
     {
       name: 'InternKit',
-      description: 'A start-up currently under development by me and some of my friends. InternKit is a web-based platform for IT-students to prepare for their first interviews and the work environment through innovative solutions utilizing AI and psychology. I am currently the team lead and a full-stack software developer.',
+      description: 'A customizable recruitment platform currently under development by me and some of my friends. InternKit is a web-based platform for small businesses who want to automate their recruitment workflow. I am currently the team lead and a full-stack software developer.',
       url: 'https://app.internkit.ee',
-      tech: 'React, TailwindCSS, Express, Supabase, Kafka',
+      tech: 'React, TailwindCSS, Express, Supabase, Redis',
       img: internhubImage,
       misc: <div>Watch the pitch - <a target="_blank" href="https://www.youtube.com/watch?v=RI9v7KF7sLg&t=3371s&ab_channel=Tallinna%C3%9ClikoolITallinnUniversity" className="font-bold text-blue-400 hover:underline">here</a>!</div>
     },
-    {
-      name: "DocGen",
-      description: "A platform for generating professional documents with ease. I started this project in January of 2025 and I am still working on it, to make it truly something that people would actually like to add to their everyday workflows.",
-      url: "https://generateit.io",
-      tech: "React, TypeScript, Express, Redis, Supabase",
-      img: docgenImage
-    }, 
     {
       name: 'Suur Karu',
       description: 'A website and homepage made for a local event organization business. Built during October-November of 2024, the single-page site has features such as a gallery, a mail form built with EmailJS and a beautiful minimalist design approach.',
@@ -67,23 +60,13 @@ export const Projects: React.FC = () => {
             <p className="font-light">A homepage for a local pub and restaurant. I made this during june of 2024. The website hosts a vast gallery and a good overview of the business.</p>
             <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
           </div>
-            {showOther ? (
-            <>
-              <div>
-                <h3 className="font-semibold text-2xl">Afke / Tauri Väli's official website - <a className="text-blue-400 hover:underline" href="https://afke.ee" target="_blank">afke.ee</a></h3>
-                <p className="font-light">Also as the second person to work on this, I optimized it for mobile and created the Portfolio section.</p>
-                <p className="font-semibold">Technologies - Vanilla HTML/CSS</p>
-              </div>
-            </>)
-            :
-            <div className="flex justify-center items-center">
+            {/* <div className="flex justify-center items-center">
               <button onClick={() => setShowOther(true)} className="dots-animation text-6xl flex flex-row gap-2 justify-center items-center w-24 h-12 transition-all border-2 border-white">
                 {[...Array(3)].map((_, index) => (
                   <div key={index} className="h-2 w-2 bg-gray-800 rounded-full bg-white"></div>
                 ))}
               </button>
-            </div>
-            }
+            </div> */}
         </div>
     </div>
   )
