@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import arrowIcon from '../assets/icons/arrow.svg'
 import './Projects.css';
 
 import internhubImage from '../assets/images/internhub.png'
-import docgenImage from '../assets/images/docgen.png'
+// import docgenImage from '../assets/images/docgen.png'
 import suurkaruImage from '../assets/images/suurkaru.png'
 
 export const Projects: React.FC = () => {
@@ -26,7 +26,7 @@ export const Projects: React.FC = () => {
     }
   ]
 
-  const [showOther, setShowOther] = useState<boolean>(false);
+  // const [showOther, setShowOther] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen w-full text-gray-800 p-2 sm:p-4 gap-6 sm:gap-10 bg-gray-700 text-white">
